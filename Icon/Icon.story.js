@@ -8,6 +8,6 @@ import Android from './svg/android.svg';
 storiesOf('Icon', module)
     .add('Initial', () => (
         <div>
-            <Icon width="60px" height="60px" icon={Android} />
+            <Icon width="60px" height="60px" fill="red" icon={Android} />
         </div>
     ));

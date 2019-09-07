@@ -21,6 +21,7 @@ export interface IconProps {
     width: string | number;
     viewBox?: string;
     style?: React.CSSProperties;
+    fill: string;
 }
 
 const Icon: React.FC<IconProps> = (props) => {
@@ -42,6 +43,7 @@ const Icon: React.FC<IconProps> = (props) => {
 
         width,
         height,
+        fill,
 
 
         ...restProps
@@ -61,6 +63,7 @@ const Icon: React.FC<IconProps> = (props) => {
         width,
         height,
         viewBox,
+        fill,
     };
 
     if (!viewBox) {
