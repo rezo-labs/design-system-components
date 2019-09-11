@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Grid, GridItem} from './index';
 import styled from 'styled-components';
+import { DESIGN_SYSTEM_TITLE } from '../constants';
 
 const Div = styled.div`
   background-color: ${props => props.bg};
@@ -9,7 +10,7 @@ const Div = styled.div`
   font-family: sans-serif;
 `;
 
-storiesOf('Grid', module)
+storiesOf(`${DESIGN_SYSTEM_TITLE}|Grid`, module)
     .add('Initial', () => (
       <Grid
         width="100%"

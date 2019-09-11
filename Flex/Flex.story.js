@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Flex, { FlexItem } from './index';
 import Box from '../Box';
 import Icon from '../Icon';
+import { DESIGN_SYSTEM_TITLE } from '../constants';
 
 const boxStyles = {
     backgroundColor: 'black',
@@ -11,7 +12,7 @@ const boxStyles = {
     border: 'solid 1px white',
 };
 
-storiesOf('Flex', module)
+storiesOf(`${DESIGN_SYSTEM_TITLE}|Flex`, module)
     .add('Basic usage', () => (
         <Flex width="100%" justifyBetween>
             {[1, 2, 3, 4, 5].map(e => (

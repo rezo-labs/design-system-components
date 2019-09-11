@@ -16,4 +16,5 @@ export default styled.div`
   padding-top: ${props => props.paddingTop};
   padding-bottom: ${props => props.paddingBottom};
   flex: ${props => props.flex};
+  background-color: ${props => props.backgroundColor};
 `;

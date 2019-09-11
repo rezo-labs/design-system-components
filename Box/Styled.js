@@ -74,6 +74,7 @@ export const Div = styled.div`
   /* box-shadow: rgba(0,0,0,0.06) 0px 2px 5px 0px; */
 
   box-shadow: ${props => getBoxLevelStyle(props.boxLevel, props.shadowDirection)};
+  flex: ${props => props.flex};
   /* box-shadow: ${(props) => {
         switch (props.boxLevel) {
             case 'level0':

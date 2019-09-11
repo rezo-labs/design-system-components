@@ -1,14 +1,13 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Icon from './index';
-import Android from './svg/android.svg';
+import Heading from './index';
 import { DESIGN_SYSTEM_TITLE } from '../constants';
 
 
-storiesOf(`${DESIGN_SYSTEM_TITLE}|Icon`, module)
+storiesOf(`${DESIGN_SYSTEM_TITLE}|Heading`, module)
     .add('Initial', () => (
         <div>
-            <Icon width="60px" height="60px" fill="red" icon={Android} />
+            <Heading is="h1" >Heading is here</Heading>
         </div>
     ));

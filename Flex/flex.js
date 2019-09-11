@@ -16,11 +16,15 @@ export default styled.div`
   padding-top: ${props => props.paddingTop};
   padding-bottom: ${props => props.paddingBottom};
 
+  background-color: ${props => props.backgroundColor};
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-content: stretch;
+  
+  flex: ${props => props.flex};
   
 
   ${is('inline')`

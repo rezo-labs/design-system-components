@@ -1,0 +1,5 @@
+const DESIGN_SYSTEM_TITLE = "DESIGN SYSTEM";
+
+export {
+    DESIGN_SYSTEM_TITLE
+}

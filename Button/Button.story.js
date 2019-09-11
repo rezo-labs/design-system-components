@@ -2,9 +2,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Button from './index';
+import { DESIGN_SYSTEM_TITLE } from '../constants';
 
 
-storiesOf('Button', module)
+storiesOf(`${DESIGN_SYSTEM_TITLE}|Button`, module)
     .add('Initial', () => (
         <div>
             <Button variant="default" size="medium">
