@@ -1,7 +1,32 @@
 import styled from 'styled-components';
 import is from '../Utils/styledIs';
+import * as CSS from "csstype";
 
-export default styled.div`
+export interface CSSStyled {
+    width?: string;
+    height?: string;
+    backgroundColor?: string;
+    flex?: string;
+
+    color?: CSS.Color;
+    // padding value of UIText
+    padding?: string;
+    paddingTop?: string;
+    paddingLeft?: string;
+    paddingBottom?: string;
+    paddingRight?: string;
+    // Margin value of UIText
+    margin?: string;
+    marginTop?: string;
+    marginLeft?: string;
+    marginBottom?: string;
+    marginRight?: string;
+    // position value
+    position?: CSS.PositionProperty;
+    justifyBetween?: boolean;
+}
+
+export default styled.div<CSSStyled>`
   width: ${props => props.width};
   height: ${props => props.height};
 

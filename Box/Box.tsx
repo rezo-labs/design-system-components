@@ -1,11 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import {
-    Div, Section, Span, Link,
+    Div, SectionStyled, Span, Link,
 } from './Styled';
+import { tuple } from '../Utils/tuple';
 
 
-export default function Box(props) {
+
+/* Button Types */
+const BoxTypes = tuple('a', 'div', 'span', 'section');
+export type BoxType = (typeof BoxTypes)[number];
+
+/* Button Types */
+const BoxLevels = tuple('level0', 'level1', 'level2', 'level3');
+export type BoxLevel = (typeof BoxLevels)[number];
+
+/* Button Types */
+const BoxShadowDirections = tuple('none', 'top', 'bottom', 'left', 'right');
+export type ShadowDirection = (typeof BoxShadowDirections)[number];
+
+
+export interface BoxProps {
+    is: BoxType;
+    boxLevel: BoxLevel;
+    shadowDirection: ShadowDirection;
+}
+
+const Box: React.FC<BoxProps> = props => {
     const {
         is, boxLevel, shadowDirection, children, ...restProps
     } = props;
@@ -21,7 +42,7 @@ export default function Box(props) {
             break;
 
         case 'section':
-            BoxWrapper = Section;
+            BoxWrapper = SectionStyled;
             break;
 
         case 'a':
@@ -35,13 +56,13 @@ export default function Box(props) {
         <React.Fragment>
             {BoxWrapper
           && (
-              <BoxWrapper boxLevel={boxLevel} shadowDirection={shadowDirection} {...restProps}>
+              <BoxWrapper {...restProps}>
                   {children}
               </BoxWrapper>
           )}
         </React.Fragment>
     );
-}
+};
 
 Box.propTypes = {
     is: PropTypes.oneOf(['a', 'div', 'span', 'section']),
@@ -54,3 +75,5 @@ Box.defaultProps = {
     boxLevel: 'level0',
     shadowDirection: 'none',
 };
+
+export default Box;

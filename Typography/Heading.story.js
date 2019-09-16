@@ -8,6 +8,6 @@ import { DESIGN_SYSTEM_TITLE } from '../constants';
 storiesOf(`${DESIGN_SYSTEM_TITLE}|Heading`, module)
     .add('Initial', () => (
         <div>
-            <Heading is="h1" >Heading is here</Heading>
+            <Heading is="div" size={800}>Heading is here</Heading>
         </div>
     ));

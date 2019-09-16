@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as CSS from 'csstype';
-// import StyledHeading from './HeadingStyled';
+import StyledHeading from './HeadingStyled';
 
 export interface HeadingStyled {
     color?: CSS.Color;
@@ -31,11 +31,11 @@ export type htmlTag = (typeof tags)[number];
 // Heading Pr
 export interface HeadingProps extends HeadingStyled {
     // Size of text: value can be [100, 200 , 300, ... 800, 900]
-    size?: number;
+    size?: any;
     // Problems? : Chưa biết loại nào cho HTML Tag
     is?: htmlTag;
     // Only except string
-    chilren: string;
+    children: string;
 }
 
 const Heading: React.FC<HeadingProps> = props => {
@@ -43,20 +43,19 @@ const Heading: React.FC<HeadingProps> = props => {
         size,
         is: htmlTag,
         children: text,
-    } = props
+    } = props;
 
     return (
-        // <StyledHeading size={size} as={htmlTag}>
-        //     {text}
-        // </StyledHeading>
-        <div>Hello</div>
+        <StyledHeading size={size} as={htmlTag}>
+            {text}
+        </StyledHeading>
     );
-}
+};
 
 // Default props
 Heading.defaultProps = {
-    size: 500,
+    size: '500',
     is: 'div',
-}
+};
 
 export default Heading;
