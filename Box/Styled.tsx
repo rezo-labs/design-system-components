@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as constants from './constants';
+import * as constants from '../constants';
 import { StandardProperties } from 'csstype';
 
 // function getShadowDirection(shadowDirection) {

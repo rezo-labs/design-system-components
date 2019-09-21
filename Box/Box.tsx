@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import { StandardProperties } from 'csstype';
 import {
     Div, SectionStyled, Span, Link,
 } from './Styled';
@@ -20,10 +21,10 @@ const BoxShadowDirections = tuple('none', 'top', 'bottom', 'left', 'right');
 export type ShadowDirection = (typeof BoxShadowDirections)[number];
 
 
-export interface BoxProps {
-    is: BoxType;
-    boxLevel: BoxLevel;
-    shadowDirection: ShadowDirection;
+export interface BoxProps extends StandardProperties {
+    is?: BoxType;
+    boxLevel?: BoxLevel;
+    shadowDirection?: ShadowDirection;
 }
 
 const Box: React.FC<BoxProps> = props => {

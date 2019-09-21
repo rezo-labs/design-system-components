@@ -2,9 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import Icon from '../Icon';
 import StyledButton from './Styled';
-
-// https://stackoverflow.com/questions/46176165/ways-to-get-string-literal-type-of-array-values-without-enum-overhead
-export const tuple = <T extends string[]>(...args: T) => args;
+import { tuple } from "../Utils/tuple";
 
 /* Button Types */
 const ButtonTypes = tuple("submit", "button", "reset");

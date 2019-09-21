@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
-import { HeadingStyled } from './Heading';
-
+import { StandardProperties } from 'csstype';
 
 const sizes: any = {
     100: css`
@@ -50,11 +49,12 @@ const sizes: any = {
   `,
 };
 
-interface StyledProps extends HeadingStyled {
+interface StyledProps extends StandardProperties {
     size?: any;
 }
 
 export default styled.div<StyledProps>`
     font-family: 'Barlow', sans-serif;
     ${({ size }) => sizes[size]};
+    padding: ${props => props.padding};
 `;

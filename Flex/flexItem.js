@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import is from '../Utils/styledIs';
+import Box from '../Box';
 
-export default styled.div`
+export default styled(Box)`
   width: ${props => props.width};
   height: ${props => props.height};
 
@@ -17,4 +18,5 @@ export default styled.div`
   padding-bottom: ${props => props.paddingBottom};
   flex: ${props => props.flex};
   background-color: ${props => props.backgroundColor};
+  border-bottom: ${props => props.borderBottom};
 `;

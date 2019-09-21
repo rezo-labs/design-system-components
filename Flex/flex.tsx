@@ -1,32 +1,18 @@
 import styled from 'styled-components';
 import is from '../Utils/styledIs';
-import * as CSS from "csstype";
+import { StandardProperties } from "csstype";
+import bold from "@atlaskit/icon/glyph/editor/bold";
 
-export interface CSSStyled {
-    width?: string;
-    height?: string;
-    backgroundColor?: string;
-    flex?: string;
-
-    color?: CSS.Color;
-    // padding value of UIText
-    padding?: string;
-    paddingTop?: string;
-    paddingLeft?: string;
-    paddingBottom?: string;
-    paddingRight?: string;
-    // Margin value of UIText
-    margin?: string;
-    marginTop?: string;
-    marginLeft?: string;
-    marginBottom?: string;
-    marginRight?: string;
-    // position value
-    position?: CSS.PositionProperty;
+export interface CSSStyled extends StandardProperties {
     justifyBetween?: boolean;
+    column?: boolean;
+    row?: boolean;
+    alignCenter?: boolean;
+    contentSpaceBetween?: boolean;
 }
 
 export default styled.div<CSSStyled>`
+  height: 100%;
   width: ${props => props.width};
   height: ${props => props.height};
 
