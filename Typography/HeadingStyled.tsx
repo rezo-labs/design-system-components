@@ -57,4 +57,5 @@ export default styled.div<StyledProps>`
     font-family: 'Barlow', sans-serif;
     ${({ size }) => sizes[size]};
     padding: ${props => props.padding};
+    margin-bottom: ${props => props.marginBottom};
 `;

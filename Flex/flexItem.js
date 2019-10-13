@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import is from '../Utils/styledIs';
 import Box from '../Box';
 
 export default styled(Box)`
   width: ${props => props.width};
+  min-width: ${props => props.minWidth};
   height: ${props => props.height};
+  visibility: ${props => props.visibility};
 
   margin: ${props => props.margin};
   margin-left: ${props => props.marginLeft};
@@ -19,4 +20,5 @@ export default styled(Box)`
   flex: ${props => props.flex};
   background-color: ${props => props.backgroundColor};
   border-bottom: ${props => props.borderBottom};
+  overflow: ${props => props.overflow};
 `;

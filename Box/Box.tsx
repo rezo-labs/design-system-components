@@ -1,4 +1,4 @@
-import * as React from 'react';
+ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { StandardProperties } from 'csstype';
 import {
@@ -25,6 +25,9 @@ export interface BoxProps extends StandardProperties {
     is?: BoxType;
     boxLevel?: BoxLevel;
     shadowDirection?: ShadowDirection;
+    onClick?: React.MouseEventHandler;
+    onMouseOver?: React.MouseEventHandler;
+    onMouseOut?: React.MouseEventHandler;
 }
 
 const Box: React.FC<BoxProps> = props => {

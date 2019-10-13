@@ -12,7 +12,6 @@ export interface CSSStyled extends StandardProperties {
 }
 
 export default styled.div<CSSStyled>`
-  height: 100%;
   width: ${props => props.width};
   height: ${props => props.height};
 
